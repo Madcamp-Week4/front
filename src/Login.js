@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+//import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Login.css';
 import SignInModal from './SignInModal';
 import axios from 'axios';
 import { login } from './api';
 import { setFiles } from './api';
-import { useAuth } from './AuthContext';
+//import { useAuth } from './AuthContext';
 import FileTypeRatioTable from './FileTypeRatioTable';
 import updownGif from './updown.gif';
 import GoogleLoginButton from './GoogleLoginButton';
@@ -14,7 +14,6 @@ function Login() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [username_c, setusername_c] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
   const [isEditing, setIsEditing] = useState(false);
   const [newUsername, setNewUsername] = useState('');
 
@@ -89,9 +88,10 @@ function Login() {
       return ratios;
     }, {});
   };
-  const calculateEstimatedCost = (files) => {
-    return "Basic: 0원";
-  };
+
+    const calculateEstimatedCost = (files) => {
+      return "Basic: 0원";
+    };
 
   const parseFileSize = (size) => {
     const sizeValue = parseInt(size, 10);

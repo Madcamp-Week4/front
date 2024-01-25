@@ -6,7 +6,7 @@ import MainPage from './MainPage';
 import { download } from './api';
 
 function DownloadPage() {
-  const [Private_key, setPrivate_key] = useState('');
+  const [Private_key] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();

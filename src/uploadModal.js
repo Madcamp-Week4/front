@@ -4,11 +4,8 @@ import axios from 'axios';
 import { setFiles } from './api';
 
 function UploadModal({ formData, onClose }) {
-  const [isEditing, setIsEditing] = useState(false);
+  const [setIsEditing] = useState(false);
   const [filename, setFilename] = useState(formData.filename);
-  const handleChange = () => {
-
-  };
   const handleSubmit = () => {
 
   }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
-import axios, { formToJSON } from 'axios';
+import axios from 'axios';
 import Blob from 'blob';
 //import FileReader from 'filereader';
 

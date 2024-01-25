@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import DownloadPage from './DownloadPage';
@@ -8,7 +8,6 @@ import Login from './Login';
 import Upload from './Upload';
 import SignInModal from './SignInModal';
 import { AuthProvider } from './AuthContext';
-import { useAuth } from './AuthContext';
 
 function App() {
   const islogged = sessionStorage.getItem('islogged');

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './SecondPage.css';
-import exampleImage from './logo.svg'; // Make sure you have an image in your project
+//import exampleImage from './logo.svg'; // Make sure you have an image in your project
 import updownGif from './updown.gif';
 
 const SecondPage = () => {

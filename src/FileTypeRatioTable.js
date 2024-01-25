@@ -3,24 +3,6 @@ import styles from './FileList.module.css';
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 const FileTypeRatioTable = ({ fileTypeRatio }) => {
-  const data = {
-    labels: ['jpg', 'png'],
-    datasets: [
-      {
-        label: 'File Type Distribution',
-        data: [50, 50], // Assuming 50% jpg and 50% png
-        backgroundColor: [
-          'rgba(75, 192, 192, 0.6)', // Light green
-          'rgba(54, 162, 235, 0.6)', // Light blue
-        ],
-        borderColor: [
-          'rgba(75, 192, 192, 1)',
-          'rgba(54, 162, 235, 1)',
-        ],
-        borderWidth: 1,
-      },
-    ],
-  };
   
 
   const transformRatiosToChartData = (ratios) => {

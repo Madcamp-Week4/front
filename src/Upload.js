@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Upload.css';
 import MainPage from './MainPage';
-import { useAuth } from './AuthContext';
 import FileList from './FileList';
 import axios from 'axios';
 import {setFiles} from './api';
 
 function Upload() {
-  const [animate, setAnimate] = useState(false);
+  const [setAnimate] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredFiles, setFilteredFiles] = useState([]);
@@ -48,7 +47,7 @@ function Upload() {
     if (!arraysAreEqual(results, filteredFiles)) {
       setFilteredFiles(results);
     }
-  }, [searchTerm, files]);
+  }, [searchTerm, filteredFiles, files]);
 
 
   const islogged = sessionStorage.getItem('islogged')
