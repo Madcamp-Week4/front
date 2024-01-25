@@ -5,7 +5,7 @@ import axios from 'axios';
 const login = async (username_c, password) => {
   
   try {
-    const response = await axios.post('/api/auth/login', { username: username_c, password: password });
+    const response = await axios.post('http://143.248.197.66:5000/auth/login', { username: username_c, password: password });
     if (response.status === 200){
     console.log('로그인 성공:', response.data);
     return response;
@@ -51,7 +51,7 @@ export { download };
 
 const setFiles = async () => {
   try{
-    const response = await axios.post('/api/files/find', {email : sessionStorage.getItem('email')}, {
+    const response = await axios.post('http://143.248.197.66:5000/files/find', {email : sessionStorage.getItem('email')}, {
       headers: {
         'Content-Type': 'application/json',
       },   
