@@ -47,7 +47,7 @@ function Upload() {
     if (!arraysAreEqual(results, filteredFiles)) {
       setFilteredFiles(results);
     }
-  }, [searchTerm, filteredFiles, files]);
+  }, [searchTerm, filteredFiles, files, setAnimate]);
 
 
   const islogged = sessionStorage.getItem('islogged')
